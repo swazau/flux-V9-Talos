@@ -21,7 +21,7 @@ spec:
     remediation:
       retries: 3
   values:
-    providerRegex: ^(Talos-1|Talos-2)$
+    providerRegex: ^(Talos-1|Talos-2|Talos-3)$
     bypassDnsResolution: true
     metrics:
       enable: true
