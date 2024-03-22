@@ -54,7 +54,7 @@ nodes:
         vip:
           ip: "10.0.0.201"
   - hostname: "Talos-3"
-    ipAddress: "10.0.0.154"
+    ipAddress: "10.0.0.144"
     installDisk: "/dev/sdb"
     talosImageURL: factory.talos.dev/installer/
     controlPlane: true
@@ -63,7 +63,7 @@ nodes:
           hardwareAddr: "48:4d:7e:d0:d4:3d"
         dhcp: false
         addresses:
-          - "10.0.0.154/24"
+          - "10.0.0.144/24"
         mtu: 1500
         routes:
           - network: 0.0.0.0/0
