@@ -5,6 +5,3 @@ metadata:
   name: rook-ceph
   labels:
     kustomize.toolkit.fluxcd.io/prune: disabled
-    volsync.backube/privileged-movers: "true"
-  annotations:
-    istio-injection: enabled
