@@ -29,7 +29,7 @@ spec:
   path: ./kubernetes/apps/rook-ceph/rook-ceph/operator
   sourceRef:
     kind: GitRepository
-    name: homelab-kubernetes
+    name: home-kubernetes
   dependsOn:
     - name: rook-ceph-csi-addons-controller-manager
   prune: true
@@ -52,7 +52,7 @@ spec:
   path: ./kubernetes/apps/rook-ceph/rook-ceph/cluster
   sourceRef:
     kind: GitRepository
-    name: homelab-kubernetes
+    name: home-kubernetes
   dependsOn:
     - name: rook-ceph-operator
   prune: true
