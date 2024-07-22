@@ -6,7 +6,7 @@ metadata:
   name: networking-speedtest
   namespace: flux-system
 spec:
-  path: ./kubernetes/apps/networking/speedtest/app
+  path: ./kubernetes/apps/network/speedtest/app
   prune: true
   sourceRef:
     kind: GitRepository
