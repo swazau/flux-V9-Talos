@@ -52,14 +52,14 @@ spec:
           http:
             port: 80
     ingress:
-      main:
-        enabled: true
-        className: nginx
+      app:
+        className: external
+        annotations:
+          external-dns.alpha.kubernetes.io/target: "external.${SECRET_DOMAIN}"
         hosts:
-          - host: &host speedtest.${SECRET_DOMAIN}
+          - host: &host "{{ .Release.Name }}.${SECRET_DOMAIN}"
             paths:
               - path: /
-                pathType: Prefix
                 service:
                   identifier: app
                   port: http
