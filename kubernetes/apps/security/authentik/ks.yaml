@@ -5,6 +5,7 @@ metadata:
   name: cluster-apps-authentik
   namespace: flux-system
 spec:
+  targetNamespace: security
   path: ./kubernetes/apps/security/authentik/app
   prune: true
   sourceRef:
