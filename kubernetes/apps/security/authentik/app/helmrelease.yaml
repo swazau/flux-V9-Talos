@@ -1,4 +1,3 @@
----
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
@@ -25,21 +24,19 @@ spec:
         image:
           repository: ghcr.io/goauthentik/server
           tag: 2024.6.1
-    ingress:
-      app:
-        className: external
+      ingress:
+        enabled: true
+        ingressClassName: external
         annotations:
           external-dns.alpha.kubernetes.io/target: "external.${SECRET_DOMAIN}"
         hosts:
-          - host: &host "{{ .Release.Name }}.${SECRET_DOMAIN}"
+          - host: "{{ .Release.Name }}.${SECRET_DOMAIN}"
             paths:
               - path: /
-                service:
-                  identifier: app
-                  port: http
+                pathType: Prefix
         tls:
           - hosts:
-              - *host
+              - "{{ .Release.Name }}.${SECRET_DOMAIN}"
     postgresql:
       enabled: true
     redis:
