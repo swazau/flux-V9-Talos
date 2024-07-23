@@ -43,7 +43,8 @@ spec:
       enabled: true
     redis:
       enabled: true
-    prometheus:
+    monitoring:
+      enabled: false
       serviceMonitor:
         create: false
   valuesFrom:
