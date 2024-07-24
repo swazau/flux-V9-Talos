@@ -47,3 +47,4 @@ spec:
   valuesFrom:
     - kind: Secret
       name: authentik-secrets
+      valuesKey: values.yaml
