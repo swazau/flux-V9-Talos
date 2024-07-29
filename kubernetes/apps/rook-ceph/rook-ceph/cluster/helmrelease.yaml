@@ -3,6 +3,7 @@ kind: HelmRelease
 metadata:
   name: rook-ceph-cluster
 spec:
+  suspend: true # remove once reinstalled
   interval: 30m
   timeout: 15m
   chart:
