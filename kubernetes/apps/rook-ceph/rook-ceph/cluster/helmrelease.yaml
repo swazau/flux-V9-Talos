@@ -33,8 +33,12 @@ spec:
         enabled: true
         ssl: true
       storage:
-        useAllNodes: true
-        useAllDevices: true
+        useAllNodes: false
+        useAllDevices: false
+        nodes:
+          - name: "talos-3"  # Replace with your actual node name
+            devices:
+              - name: "/dev/nvme0n1" 
     cephBlockPools:
       - name: ceph-blockpool
         spec:
